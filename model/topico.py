@@ -6,6 +6,6 @@ class Topico(models.Model):
     class Meta:
         pass
 
-    Ingenieria de software = None
+    Ingenieria_de_software = None
 
 

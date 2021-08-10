@@ -3,7 +3,7 @@
 from django.db import models
 from .authManager import UsuarioManager
 
-class PersonaModel(models.Model):
+class Persona(models.Model):
 
     TIPO_PERSONA = [
         (1, 'ADMINISTRADOR'),
@@ -38,4 +38,4 @@ class PersonaModel(models.Model):
     )
     password = models.TextField()
     class Meta:
-        db_table = 'personas'
+        pass
