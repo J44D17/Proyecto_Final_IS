@@ -88,16 +88,18 @@ Claramente para desarrollar el diagrama tuvimos que realizar una abstracción .S
 # Principios SOLID
 Es una serie de principios y bunas practicas  que permiten administrar la mayoría de los problemas de diseño de software conseguir el desarrollo de un código más limpio, más mantenible, más escalable a futuro y menos propenso a errores.
 Los 3 principios usados son:
-- O  Principio de Abierto-Cerrado
-      que dice que el código debería estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado a modificaciones, salvo las         modificaciones que se deban realizar si se encuentra algún error.
-    
-  
 
-
-
-
-
-
+- S (Principio deResponsabilidad única)
+      Si una Clase tiene muchas responsabilidades, aumenta la posibilidad de errores porque hacer cambios en una de sus responsabilidades podría afectar a las otras sin que usted lo sepa.
+      Este principio tiene como objetivo separar los comportamientos para que si surgen errores como resultado de su cambio, no afecten a otros comportamientos no relacionados.
+   
+- O (Principio de Abierto-Cerrado)
+      Este principio tiene como objetivo extender el comportamiento de una clase sin cambiar el comportamiento existente de esa clase. Esto es para evitar causar errores dondequiera que se utilice la Clase.
+      El código debería estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado a modificaciones, salvo las         modificaciones que se deban realizar si se encuentra algún error.
+- I (Principio de Segregación de Interfaces)
+      Cuando se requiere que una Clase realice acciones que no son útiles, es un desperdicio y puede producir errores inesperados si la Clase no tiene la capacidad para realizar esas acciones.
+      Una Clase debe realizar solo las acciones necesarias para cumplir su función. Cualquier otra acción debe eliminarse por completo o trasladarse a otro lugar si pudiera ser utilizada por otra Clase en el futuro.
+      Este principio tiene como objetivo dividir un conjunto de acciones en conjuntos más pequeños para que una Clase ejecute SOLO el conjunto de acciones que requiere.
 
 #### Values
 En este caso sólo nos interesaron los atributos . Al contrario que las entidades sabemos que los value objects representan conceptos que no tienen identidad.
