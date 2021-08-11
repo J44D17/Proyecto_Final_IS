@@ -109,7 +109,7 @@ Los 3 principios usados son:
       
      ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/i1.jfif)
      
- # Metodos expansibles
+ # Métodos expansibles
  ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/metodos%20expansibles.jfif)
  ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/metos%20expansibles%202.jfif)
 #### Values
