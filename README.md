@@ -4,9 +4,10 @@
 El propósito del proyecto de presentación de eventos para la escuela de Ciencia de la Computación es implementar una página Web en donde los participantes de Ciencia de la computación puedan ver los distintos ventos próximos que se realizara.
 Esta será capaz de dar información de donde ocurrirá dicho evento, el lugar del evento, información sobre el ponente, el tema a tratar y demás información relevante.
 Otro de los propósitos para desarrollar esta página web es aplicar los siguientes conceptos aprendidos en clase de Ingeniería de software en el programa
-•	Estilos de Programación aplicados
-•	Principios SOLID aplicados
-•	Conceptos DDD aplicados
+
+ •	Estilos de Programación aplicados
+ •	Principios SOLID aplicados
+ •	Conceptos DDD aplicados
 
 
 ## Tipos de programación usados
