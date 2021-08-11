@@ -6,6 +6,7 @@ from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView
 
 urlpatterns = [
     path('registro', RegistroUsuarioController.as_view()),
+    path('eventos', RegistroUsuarioController.as_view()),
 
     # Rutas del JWT
     path('login-custom', CustomPayloadController.as_view()),

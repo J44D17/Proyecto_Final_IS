@@ -18,25 +18,6 @@ from django.db import transaction
 
 load_dotenv()
 
-
-class RegistroUsuarioController(CreateAPIView):
-    serializer_class = RegistroUsuarioSerializer
-
-    def post(self, request: Request):
-        data = self.serializer_class(data=request.data)
-        if data.is_valid():
-            data.save()
-            return Response({
-                "message": "Usuario Creado exitosamente",
-                "content": data.data,
-                "success": True
-            }, status=status.HTTP_201_CREATED)
-        else:
-            return Response({
-                "message": "Error al crear el usuario",
-                "content": data.errors,
-                "success": False
-            })
 class CustomPayloadController(TokenObtainPairView):
     """Sirve para modificar el payload de la token de acceso"""
     permission_classes = [AllowAny]
@@ -76,6 +57,25 @@ class RegistroUsuarioController(CreateAPIView):
         else:
             return Response({
                 "message": "Error al crear el usuario",
+                "content": data.errors,
+                "success": False
+            })
+
+class RegistroEventoController(CreateAPIView):
+    serializer_class = RegistroEventoSerializer
+
+    def post(self, request: Request):
+        data = self.serializer_class(data=request.data)
+        if data.is_valid():
+            data.save()
+            return Response({
+                "message": "Evento Creado exitosamente",
+                "content": data.data,
+                "success": True
+            }, status=status.HTTP_201_CREATED)
+        else:
+            return Response({
+                "message": "Error al crear el evento",
                 "content": data.errors,
                 "success": False
             })

@@ -54,3 +54,19 @@ class CustomPayloadSerializer(TokenObtainPairSerializer):
         token['user_mail'] = user.usuarioCorreo
         token['mensaje'] = 'Holis'
         return token
+class RegistroEventoSerializer(serializers.ModelSerializer):
+    def save(self):
+        fechaEvento = self.validated_data.get('fechaEvento')
+        eventoTipo = self.validated_data.get('eventoTipo')
+        eventoLugar = self.validated_data.get('eventoLugar')
+        nuevoEvento = EventoModel(
+            fechaEvento=fechaEvento,
+            eventoTipo=eventoTipo,
+            eventoLugar=eventoLugar
+        )
+        nuevoEvento.save()
+        return nuevoEvento
+    
+    class Meta:
+        model = EventoModel
+        
