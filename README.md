@@ -48,9 +48,15 @@ Las guias de estilos en python indican que debe de haber una longitd máxima de 
 
 ### Mockups desarrollados
 
-![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_1.png)
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_8login.png)
 
-![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_2.png)
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_9Reguistro.png)
+
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_11_Eventos_proximos.png)
+
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_13_eventos.png)
+
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_14_participacion.png)
 
 ### Interfaces
 
