@@ -1,1 +1,3 @@
 entorno_IS
+__pycache__/
+.env

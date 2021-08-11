@@ -1,7 +1,8 @@
 from django.contrib.auth.models import BaseUserManager
+# BaseUserManager => sirve para modificar el comportamiento de la creacion de un usuario x consola
+
 
 class UsuarioManager(BaseUserManager):
-
     """Clase que sirve para modificar el comportamiento del modelo auth_user de django"""
 
     def create_user(self, email, nombre, apellido, tipo, password=None):
