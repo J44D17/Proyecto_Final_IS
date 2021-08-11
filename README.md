@@ -37,3 +37,9 @@ Las guias de estilos en python indican que debe de haber una longitd máxima de 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_1.png)
 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_2.png)
+
+### Interfaces
+
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Captura_1.png)
+
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Inicio.png)
