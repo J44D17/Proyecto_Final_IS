@@ -80,12 +80,5 @@ class RegistroEventoController(ListCreateAPIView):
                 "success": False
             })
 class EventosController(ListAPIView):
-    serializer_class = EventoSerializer
+    serializer_class = RegistroEventoSerializer
     queryset = EventoModel.objects.all()
-    #serializer_class = EventoSerializer
-
-    #def get(self, request: Request, id):
-    #    evento = EventoModel.objects.filter(eventoId=id).first()
-    #    pruebaLibro = LibroModel.objects.values(
-    #        'libroId'
-    #    )
