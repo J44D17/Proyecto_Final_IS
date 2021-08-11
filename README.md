@@ -110,8 +110,8 @@ Los 3 principios usados son:
      ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/i1.jfif)
      
  # Metodos expansibles
- ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/metos expansibles 2.jfif)
- ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/metos expansibles 1.jfif)
+ ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/metodos%20expansibles.jfif)
+ ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/metos%20expansibles%202.jfif)
 #### Values
 En este caso sólo nos interesaron los atributos . Al contrario que las entidades sabemos que los value objects representan conceptos que no tienen identidad.
 
