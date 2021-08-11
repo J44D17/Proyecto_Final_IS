@@ -85,6 +85,19 @@ Claramente para desarrollar el diagrama tuvimos que realizar una abstracción .S
 - 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Screenshot_1.png)
 
+# Principios SOLID
+Es una serie de principios y bunas practicas  que permiten administrar la mayoría de los problemas de diseño de software conseguir el desarrollo de un código más limpio, más mantenible, más escalable a futuro y menos propenso a errores.
+Los 3 principios usados son:
+- O  Principio de Abierto-Cerrado
+      que dice que el código debería estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado a modificaciones, salvo las         modificaciones que se deban realizar si se encuentra algún error.
+    
+  
+
+
+
+
+
+
 
 #### Values
 En este caso sólo nos interesaron los atributos . Al contrario que las entidades sabemos que los value objects representan conceptos que no tienen identidad.
