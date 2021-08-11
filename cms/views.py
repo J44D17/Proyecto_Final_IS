@@ -117,7 +117,6 @@ class EventoController(RetrieveUpdateDestroyAPIView):
             evento_actualizado = self.serializer_class().update(
                 instance=evento, validated_data=data.initial_data)
 
-            # print(evento_actualizado)
             return Response(data='ok')
         else:
             return Response(data={
@@ -130,7 +129,7 @@ class EventoController(RetrieveUpdateDestroyAPIView):
         evento: EventoModel = EventoModel.objects.filter(eventoId=id).first()
         evento.save()
         # el metodo delete de la instancia elimina el registro de la bd y retornara, el total de registros eliminados
-        # libro.delete()
+        # evento.delete()
         data = self.serializer_class(instance=evento)
         return Response(data={
             "success": True,

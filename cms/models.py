@@ -103,3 +103,52 @@ class EventoModel(models.Model):
 
     class Meta:
         db_table = 'eventos'
+class PonenciaModel(models.Model):
+    ponenciaId = models.AutoField(
+        primary_key=True,
+        unique=True,
+        null=False,
+        db_column='id'
+    )
+
+    fechaCreacion = models.DateTimeField(
+        auto_now_add=True,
+        db_column='fecha_creacion'
+    )
+
+    evento = models.ForeignKey(
+        to=EventoModel,
+        db_column='evento_id',
+        on_delete=models.CASCADE,
+        related_name='evento_id',
+        verbose_name='Evento',
+        help_text='Seleccione evento a agregar'
+    )
+
+    class Meta:
+        db_table="ponencias"
+        verbose_name = "ponencia"
+        verbose_name_plural = "ponencias"
+        ordering = ['-fechaCreacion']
+
+class ActividadModel(models.Model):
+    actividadId = models.AutoField(
+        primary_key=True,
+        unique=True,
+        null=False,
+        db_column='id'
+    )
+    ponencia = models.ForeignKey(
+        to=PonenciaModel,
+        db_column='ponencia_id',
+        on_delete=models.CASCADE,
+        related_name='ponencia_id',
+        verbose_name='Ponencia',
+        help_text='Seleccione ponencia a agregar'
+    )
+
+    class Meta:
+        db_table="actividades"
+        verbose_name = "actividad"
+        verbose_name_plural = "actividades"
+        ordering = ['-actividadId']
