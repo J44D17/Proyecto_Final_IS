@@ -63,3 +63,31 @@ Las guias de estilos en python indican que debe de haber una longitd máxima de 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Captura_1.png)
 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Inicio.png)
+
+### Conceptos DDD aplicados
+
+#### Ubiquitous Language
+Es muy importante la comunicación enter el grupo para evitar problemas al desarrollar software, cuando teniamos que hacer el código y usar lenguaje en común , nos dividimos las partes para que no haya problema alguno, com módulos, funciones, templates, etc.
+
+#### Entities
+Claramente para desarrollar el diagrama tuvimos que realizar una abstracción .Sabemos que las entidades deben poder ser distinguidas de otros objetos aunque tengan los mismos atributos y que tienen que ser consideradas iguales a otros objetos aún cuando sus atributos difieren.
+
+- actividad
+- evento
+- persona
+- ponencia
+- presentacion
+- programa
+- sesion
+- tipoevento
+- tipousuario
+- topico
+- 
+![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/Screenshot_1.png)
+
+
+#### Values
+En este caso sólo nos interesaron los atributos . Al contrario que las entidades sabemos que los value objects representan conceptos que no tienen identidad.
+
+#### Infraestructure
+En el documento de requisitos de software se especifican las decisiones tecnológicas que definimos
