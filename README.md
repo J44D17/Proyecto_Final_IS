@@ -98,12 +98,20 @@ Los 3 principios usados son:
       Este principio tiene como objetivo extender el comportamiento de una clase sin cambiar el comportamiento existente de esa clase. Esto es para evitar causar errores dondequiera que se utilice la Clase.
       El código debería estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado a modificaciones, salvo las         modificaciones que se deban realizar si se encuentra algún error.
       
-      ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o1.jfif)
+     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o3.jfif)
+     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o2.jfif)
+     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o1.jfif)
+     
 - I (Principio de Segregación de Interfaces)
       Cuando se requiere que una Clase realice acciones que no son útiles, es un desperdicio y puede producir errores inesperados si la Clase no tiene la capacidad para realizar esas acciones.
       Una Clase debe realizar solo las acciones necesarias para cumplir su función. Cualquier otra acción debe eliminarse por completo o trasladarse a otro lugar si pudiera ser utilizada por otra Clase en el futuro.
       Este principio tiene como objetivo dividir un conjunto de acciones en conjuntos más pequeños para que una Clase ejecute SOLO el conjunto de acciones que requiere.
-
+      
+     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/i1.jfif)
+     
+ # Metodos expansibles
+ ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/metos expansibles 2.jfif)
+ ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/metos expansibles 1.jfif)
 #### Values
 En este caso sólo nos interesaron los atributos . Al contrario que las entidades sabemos que los value objects representan conceptos que no tienen identidad.
 
