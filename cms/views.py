@@ -4,7 +4,8 @@ from rest_framework.generics import (
     CreateAPIView,
     DestroyAPIView,
     ListCreateAPIView,
-    ListAPIView)
+    ListAPIView,
+    RetrieveUpdateDestroyAPIView)
 from rest_framework.pagination import PageNumberPagination
 from .serializers import *
 from rest_framework import status
@@ -63,6 +64,7 @@ class RegistroUsuarioController(ListCreateAPIView):
 
 class RegistroEventoController(ListCreateAPIView):
     serializer_class = RegistroEventoSerializer
+    permission_classes = [IsAuthenticated]
 
     def post(self, request: Request):
         data = self.serializer_class(data=request.data)
@@ -82,3 +84,56 @@ class RegistroEventoController(ListCreateAPIView):
 class EventosController(ListAPIView):
     serializer_class = RegistroEventoSerializer
     queryset = EventoModel.objects.all()
+
+class EventoController(RetrieveUpdateDestroyAPIView):
+    queryset = EventoModel.objects.all()
+    serializer_class = RegistroEventoSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request: Request, id):
+        evento = EventoModel.objects.filter(eventoId=id).first()
+        pruebaEvento = EventoModel.objects.values(
+            'eventoId', 'eventoTipo', 'fechaEvento').filter(eventoId=id).first()
+        # print(pruebaevento)
+        if evento is not None:
+            eventoSerializado = self.serializer_class(instance=evento)
+            return Response(data={
+                "success": True,
+                "content": eventoSerializado.data,
+                "message": None
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response(data={
+                "message": "Evento no encontrado",
+                "content": None,
+                "success": False
+            }, status=status.HTTP_404_NOT_FOUND)
+    def put(self, request: Request, id):
+        evento = EventoModel.objects.filter(eventoId=id).first()
+        if evento:
+            data = self.serializer_class(data=request.data)
+            # initial_data => retorna todos los campos que hace match con el modelo PERO no valida las funciones de unique_together ni los indices ni los campos unique
+            # si queremos 'pasarnos de vivos' y actualizar un registro con otro saltandonos las reglas del unique_together igual no se podra porque ahi la bd entrara a trabjar directamente a pesar que en el ORM lo permitase
+            evento_actualizado = self.serializer_class().update(
+                instance=evento, validated_data=data.initial_data)
+
+            # print(evento_actualizado)
+            return Response(data='ok')
+        else:
+            return Response(data={
+                "message": "No se encontro el evento",
+                "content": None,
+                "success": False
+            }, status=status.HTTP_404_NOT_FOUND)
+
+    def delete(self, request: Request, id):
+        evento: EventoModel = EventoModel.objects.filter(eventoId=id).first()
+        evento.save()
+        # el metodo delete de la instancia elimina el registro de la bd y retornara, el total de registros eliminados
+        # libro.delete()
+        data = self.serializer_class(instance=evento)
+        return Response(data={
+            "success": True,
+            "content": data.data,
+            "message": "Se inhabilito el evento exitosamente"
+        })

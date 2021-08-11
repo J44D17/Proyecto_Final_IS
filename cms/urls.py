@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import (RegistroUsuarioController, CustomPayloadController, RegistroEventoController, EventosController
+from .views import (RegistroUsuarioController, CustomPayloadController, RegistroEventoController, EventosController, EventoController
 )
 from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView
 
@@ -9,6 +9,7 @@ urlpatterns = [
     path('registro', RegistroUsuarioController.as_view()),
     path('registraEvento', RegistroEventoController.as_view()),
     path('eventos', EventosController.as_view()),
+    path('evento/<int:id>', EventoController.as_view()),
 
     # Rutas del JWT
     path('login-custom', CustomPayloadController.as_view()),
