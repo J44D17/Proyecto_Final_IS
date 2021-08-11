@@ -32,6 +32,8 @@ A pesar de que Python obliga a usar una indentación, de lo contrario el código
 ### Longitud máxima de líneas
 Las guias de estilos en python indican que debe de haber una longitd máxima de caracteres por cas línea y es de 79 caracteres por línea.
 
+### Mockups desarrollados
+
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_1.png)
 
 ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/mockup_2.png)
