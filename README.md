@@ -5,9 +5,9 @@ El propósito del proyecto de presentación de eventos para la escuela de Cienci
 Esta será capaz de dar información de donde ocurrirá dicho evento, el lugar del evento, información sobre el ponente, el tema a tratar y demás información relevante.
 Otro de los propósitos para desarrollar esta página web es aplicar los siguientes conceptos aprendidos en clase de Ingeniería de software en el programa
 
-- Estilos de Programación aplicados
-- Principios SOLID aplicados
-- Conceptos DDD aplicados
+- Estilos de Programación
+- Principios SOLID
+- Conceptos DDD
 
 
 ## Tipos de programación usados
