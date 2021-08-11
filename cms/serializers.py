@@ -70,3 +70,7 @@ class RegistroEventoSerializer(serializers.ModelSerializer):
     class Meta:
         model = EventoModel
         
+class EventoSerializer(serializers.Serializer):
+    class Meta:
+        model = EventoModel
+        fields = '__all__'

@@ -42,7 +42,7 @@ class CustomPayloadController(TokenObtainPairView):
             })
 
 
-class RegistroUsuarioController(CreateAPIView):
+class RegistroUsuarioController(ListCreateAPIView):
     serializer_class = RegistroUsuarioSerializer
 
     def post(self, request: Request):
@@ -61,7 +61,7 @@ class RegistroUsuarioController(CreateAPIView):
                 "success": False
             })
 
-class RegistroEventoController(CreateAPIView):
+class RegistroEventoController(ListCreateAPIView):
     serializer_class = RegistroEventoSerializer
 
     def post(self, request: Request):
@@ -79,3 +79,13 @@ class RegistroEventoController(CreateAPIView):
                 "content": data.errors,
                 "success": False
             })
+class EventosController(ListAPIView):
+    serializer_class = EventoSerializer
+    queryset = EventoModel.objects.all()
+    #serializer_class = EventoSerializer
+
+    #def get(self, request: Request, id):
+    #    evento = EventoModel.objects.filter(eventoId=id).first()
+    #    pruebaLibro = LibroModel.objects.values(
+    #        'libroId'
+    #    )

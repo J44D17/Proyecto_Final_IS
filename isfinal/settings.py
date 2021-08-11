@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 from os import environ
+from datetime import time, timedelta
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt',
     'cms'
 ]
 
@@ -82,11 +84,11 @@ WSGI_APPLICATION = 'isfinal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': environ.get('NAME'),
-        'USER': environ.get('USER'),
-        'PASSWORD': environ.get('PASSWORD'),
-        'HOST': environ.get('HOST'),
-        'PORT':environ.get('PORT'),
+        'NAME': environ.get('NAME_DB'),
+        'USER': environ.get('USER_DB'),
+        'PASSWORD': environ.get('PASSWORD_DB'),
+        'HOST': environ.get('HOST_DB'),
+        'PORT':environ.get('PORT_DB'),
     }
 }
 
@@ -113,9 +115,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Lima'
 
 USE_I18N = True
 
@@ -135,3 +137,20 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "cms.UsuarioModel"
+# sirve para definir a DRF algunas configuraciones adicionales como la paginacion, la autenticacion y exepciones
+REST_FRAMEWORK = {
+    # sirve para indicar cual sera la clase encargada de la autenticacion de los metodos REST
+    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework_simplejwt.authentication.JWTAuthentication', ],
+}
+
+# sirve para configurar toda la libreria de JWT
+SIMPLE_JWT = {
+    # modifica el tiempo de vida de la access token
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=10),
+    # modifica el tiempo de vida de la refresh token
+    'REFRESH_TOKEN_LIFETIME': timedelta(hours=10),
+    # modifica la contraseña de la token
+    # 'SIGNING_KEY':'mipassword',
+    # indicar cual es la PK del modelo de autenticacion
+    'USER_ID_FIELD': 'usuarioId'
+}
