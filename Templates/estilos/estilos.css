@@ -1,0 +1,24 @@
+.sep_lin_20{
+    line-height:20px;
+}
+
+.sep_lin_2{
+    line-height:2rem;
+}
+
+.sep_lin_3{
+    line-height:2.2rem;
+}
+
+.mar_b_0{
+    margin-bottom: 0;
+}
+
+.mar_b_1{
+    margin-bottom: 0.5rem;
+}
+
+.let_space_1{
+    letter-spacing: -0.1rem
+}
+

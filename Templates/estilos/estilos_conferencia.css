@@ -1,0 +1,28 @@
+.informacion_conferencia_1{
+    border:1px solid black;
+    padding:1rem;
+    width:80%;
+}
+
+.contenedor_info_con_1, .contenedor_info_con_2{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-top:2rem;
+}
+
+.contenedor_info_con_2{
+    margin-bottom: 3rem;
+}
+
+.portada-imagen{
+    position:relative;
+    background-color: red;
+    height:12rem;
+}
+
+.boton_portada{
+    position:absolute;
+    right: 20px;
+    bottom: 20px;
+}
