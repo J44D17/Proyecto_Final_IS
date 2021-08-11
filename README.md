@@ -94,12 +94,12 @@ Los 3 principios usados son:
       Este principio tiene como objetivo separar los comportamientos para que si surgen errores como resultado de su cambio, no afecten a otros comportamientos no relacionados.
    
    ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/s1.jfif)
+   ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o3.jfif)
+   ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o2.jfif)
 - O (Principio de Abierto-Cerrado)
       Este principio tiene como objetivo extender el comportamiento de una clase sin cambiar el comportamiento existente de esa clase. Esto es para evitar causar errores dondequiera que se utilice la Clase.
       El código debería estar abierto para extenderlo y para añadirle nuevas funcionalidades, pero en cambio debería estar cerrado a modificaciones, salvo las         modificaciones que se deban realizar si se encuentra algún error.
-      
-     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o3.jfif)
-     ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o2.jfif)
+     
      ![myimage-alt-tag](https://github.com/J44D17/Proyecto_Final_IS/blob/main/Imagenes/o1.jfif)
      
 - I (Principio de Segregación de Interfaces)
